@@ -1,0 +1,39 @@
+.header{background: transparent;border-bottom: 1px solid rgb(from #000 r g b / 0.2);;}
+.header ul{margin:0;padding:0;list-style-type:none;}
+.header .header-desktop{padding: 23px 0;}
+.header .header-desktop .navbar{display:flex;align-items:center;}
+.header .header-desktop .navbar .navbar-brand{max-width: 135px;width: 100%;flex-shrink: 0;}
+.header .header-desktop .main_menu{margin:0 20px 0 auto;}
+.header .header-desktop .main_menu ul{display:flex;align-items: center;}
+.header .header-desktop .main_menu ul li + li{margin-left: 45px;}
+.header .header-desktop .main_menu ul li:last-child a { background: var(--primary-color); color: #fff; padding: 16px 24px; border-radius: 18px; font-weight: 600; font-size: 18px; line-height: 30px; }
+.header .header-desktop .main_menu ul li:last-child a:hover{background-color: #000;}
+
+@media(min-width:992px){
+    .header .header-desktop .main_menu .close-btn,.header .header-desktop .menu-btn{display: none;}
+}
+@media(max-width:1199.98px){
+    .header .header-desktop .main_menu ul li + li{margin-left: 20px;}
+    .header .header-desktop .main_menu ul li:last-child a { padding: 16px 18px; border-radius: 12px; }
+}
+@media(max-width:991.98px){
+    .header .header-desktop .navbar {justify-content: space-between;}
+    .header .header-desktop .main_menu{position: absolute;top: 80px;right: 0;background-color: #FFFCF8;margin: 0;width: 100%;display: none;}
+    .header .header-desktop .main_menu.open{right:0;}
+    .header .header-desktop .main_menu ul{flex-direction:column;align-items: flex-start; padding: 10px 0 25px; }
+    .header .header-desktop .main_menu ul li { margin-left: 16px; margin-top: 20px; }
+    .header .header-desktop .main_menu ul li + li { margin-left: 16px; }
+    .header .header-desktop .main_menu ul li a{font-size: 14px;line-height: 20px;}
+    .header .header-desktop .main_menu ul li:last-child a { font-size: 14px; line-height: 20px; border-radius: 6px; }
+    .header .header-desktop .main_menu .close-btn{display: none;}
+    .header .header-desktop .header-right {display: flex;align-items: center;}
+    .header .header-desktop .menu-btn{display: inline-block;margin-left: 10px;}
+    .menu-btn {width: 40px;height: 40px;transition-duration: 0.5s;}
+    .menu-btn .icon {transition-duration: 0.5s;position: absolute;width: 40px;height: 4px;top: 40px;background-color: var(--primary-color);}
+    .menu-btn .icon:before {transition-duration: 0.5s;position: absolute;width: 40px;height: 4px;background-color: var(--primary-color);content: "";top: -10px;}
+    .menu-btn .icon:after {transition-duration: 0.5s;position: absolute;width: 40px;height: 4px;background-color: var(--primary-color);content: "";top: 10px;}
+    .menu-btn.open .icon {transition-duration: 0.5s;background: transparent;}
+    .menu-btn.open .icon:before {transform: rotateZ(45deg) scaleX(1) translate(5px, 6px);}
+    .menu-btn.open .icon:after {transform: rotateZ(-45deg) scaleX(1) translate(8px, -8px);}
+    .menu-btn:hover {cursor: pointer;}
+}
